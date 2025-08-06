@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🛒 Lara-appo - Système de Gestion de Boutique
 
 ## 📖 Qu'est-ce que Lara-appo ?
@@ -121,3 +122,6 @@ Ce projet est en développement ! N'hésitez pas à proposer des améliorations.
 ---
 
 **💡 Conseil** : Cette application est parfaite pour apprendre Laravel et la gestion de base de données !
+=======
+
+>>>>>>> a29aa91dad1dbae375345098fdb90df7150d1ddd
