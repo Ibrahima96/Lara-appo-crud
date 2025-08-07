@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🛒 Lara-appo - Système de Gestion de Boutique
 
 ## 📖 Qu'est-ce que Lara-appo ?
