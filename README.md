@@ -41,16 +41,10 @@ Lara-appo est une application web qui aide les commerçants à gérer leur bouti
 ### 1. Installation :
 ```bash
 # Cloner le projet
-git clone [https://github.com/Ibrahima96/Lara-appo-crud.git]
+git clone https://github.com/Ibrahima96/Lara-appo-crud.git
 
-# Installer les dépendances PHP
-composer install
-
-# Installer les dépendances JavaScript
-npm install
-
-# Copier le fichier de configuration
-cp .env.example .env
+# Installer les dépendances PHP et Installer les dépendances JavaScript
+composer run dev
 
 # Créer la base de données
 php artisan migrate
