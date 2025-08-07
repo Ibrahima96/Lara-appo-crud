@@ -16,6 +16,7 @@
             <a href="{{ route('clients.index') }}" class="btn btn-sm btn-outline">Clients</a>
             <!-- Tu ajouteras Produits & Commandes ici plus tard -->
             <a href="{{ route('produits.index') }}" class="btn btn-sm btn-outline">Produit</a>
+            <a href="{{ route('commandes.index') }}" class="btn btn-sm btn-outline">Commandes</a>
         </div>
     </div>
 

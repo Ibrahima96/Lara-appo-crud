@@ -11,4 +11,10 @@ class Client extends Model
         'email',
         'telephone'
     ];
+
+
+
+    public function commande(){
+        return $this->hasMany(Commande::class); //📢 Traduction : « Un client a plusieurs commandes »
+    }
 }
