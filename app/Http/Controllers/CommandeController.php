@@ -136,6 +136,10 @@ class CommandeController extends Controller
      */
     public function destroy(Commande $commande)
     {
-        //
+        // Détacher tous les produits liés avant de supprimer la commande
+        $commande->produits()->detach();
+        $commande->delete();
+
+        return redirect()->route('commandes.index')->with('success', 'Commande supprimée avec succès !');
     }
 }

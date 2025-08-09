@@ -34,7 +34,7 @@ class ClientController extends Controller
         $validated = $request->validated();
         Client::create($validated);
 
-        return redirect()->route('clients.index')->with( 'success',' enregistrer avec success !');
+        return redirect()->route('clients.index')->with('success', 'Client enregistré avec succès !');
 
     }
 
@@ -58,29 +58,13 @@ class ClientController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    // public function update(ClientRequest $request, Client $client)
-    // {
-    //     $validated = $request->validated();
+    public function update(ClientRequest $request, Client $client)
+    {
+        $validated = $request->validated();
+        $client->update($validated);
 
-    //      $client->update( $validated);
-    //      dd($client);
-    //       return redirect()->route('clients.index')->with( 'success',' enregistrer avec success !');
-    // }
-
-     public function update(Request $request, $id)
-{
-    $client = Client::findOrFail($id);
-
-    $validated = $request->validate([
-        'nom' => 'required|string|max:255',
-        'email' => 'required|email|unique:clients,email,' . $client->id,
-        'telephone' => 'nullable|string|max:20',
-    ]);
-
-    $client->update($validated);
-
-    return redirect()->route('clients.index')->with('success', 'Client mis à jour !');
-}
+        return redirect()->route('clients.index')->with('success', 'Client mis à jour avec succès !');
+    }
 
 
     /**
@@ -90,7 +74,7 @@ class ClientController extends Controller
     {
         $client->delete();
 
-        return redirect()->route('clients.index')->with( 'success',' supprimer avec success !');
+        return redirect()->route('clients.index')->with('success', 'Client supprimé avec succès !');
 
     }
 }

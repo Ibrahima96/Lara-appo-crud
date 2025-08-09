@@ -14,7 +14,8 @@ class Client extends Model
 
 
 
-    public function commande(){
-        return $this->hasMany(Commande::class); //📢 Traduction : « Un client a plusieurs commandes »
+    public function commandes()
+    {
+        return $this->hasMany(Commande::class);
     }
 }

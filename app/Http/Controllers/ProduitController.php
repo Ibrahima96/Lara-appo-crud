@@ -63,7 +63,7 @@ class ProduitController extends Controller
         $produit->update($validated);
        
 
-        return redirect()->route('produits.index')->with('success','Produits modifier avec success');
+        return redirect()->route('produits.index')->with('success', 'Produit modifié avec succès !');
     }
 
     /**
@@ -72,6 +72,6 @@ class ProduitController extends Controller
     public function destroy(Produit $produit)
     {
         $produit->delete();
-        return to_route('produits.index')->with('success','produit supprimer avec success');
+        return redirect()->route('produits.index')->with('success', 'Produit supprimé avec succès !');
     }
 }
